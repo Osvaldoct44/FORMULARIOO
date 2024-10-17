@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Lotería</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta sobre Lotería</h1>
+        <!-- Formulario con Formspree -->
+        <form action="https://formspree.io/f/xyzyyvjk" method="post">
+            <!-- Nombre y Correo -->
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <!-- Preguntas -->
+            <label for="edad">1. ¿Cuál es tu rango de edad?</label>
+            <select id="edad" name="edad" required>
+                <option value="18-25">18-20</option>
+                <option value="26-35">21-23</option>
+                <option value="36-45">24-26</option>
+                <option value="46+">-18</option>
+            </select>
+
+            <label>2. ¿Con qué frecuencia compras boletos de lotería?</label>
+            <input type="radio" id="frecuencia-semanal" name="frecuencia" value="Semanal">
+            <label for="frecuencia-semanal">Semanal</label>
+            <input type="radio" id="frecuencia-mensual" name="frecuencia" value="Mensual">
+            <label for="frecuencia-mensual">Mensual</label>
+            <input type="radio" id="frecuencia-ocasional" name="frecuencia" value="Ocasional">
+            <label for="frecuencia-ocasional">A veces</label>
+
+            <label>3. ¿Prefieres los sorteos tradicionales o los juegos instantáneos?</label>
+            <input type="radio" id="tradicional" name="tipo_juego" value="Tradicional">
+            <label for="tradicional">Tradicional</label>
+            <input type="radio" id="instantaneo" name="tipo_juego" value="Instantáneo">
+            <label for="instantaneo">Instantáneo</label>
+
+            <label for="motivo">4. ¿Cuál es tu principal motivo para jugar a la lotería?</label>
+            <textarea id="motivo" name="motivo" rows="3" required></textarea>
+
+            <label>5. ¿Qué juegos de lotería juegas regularmente? (Selecciona todos los que apliquen)</label>
+            <input type="checkbox" id="raspaditos" name="juegos[]" value="Raspaditos">
+            <label for="raspaditos">Mexicana</label>
+            <input type="checkbox" id="melate" name="juegos[]" value="Melate">
+            <label for="melate">Animada</label>
+            <input type="checkbox" id="chispazo" name="juegos[]" value="Chispazo">
+            <label for="chispazo">En linea</label>
+            <input type="checkbox" id="sorteo_nacional" name="juegos[]" value="Sorteo Nacional">
+            <label for="sorteo_nacional"> Nacional</label>
+
+            <label for="gasto">6. ¿Cuánto sueles gastar en lotería?</label>
+            <input type="text" id="gasto" name="gasto" required>
+
+            <label>7. ¿Has ganado alguna vez en la lotería?</label>
+            <input type="radio" id="ganado-si" name="ganado" value="Sí">
+            <label for="ganado-si">Sí</label>
+            <input type="radio" id="ganado-no" name="ganado" value="No">
+            <label for="ganado-no">No</label>
+
+            <label for="cantidad">8. Si respondiste 'Sí', ¿cuál fue la cantidad ganada? (Deja en blanco si no aplica)</label>
+            <input type="text" id="cantidad" name="cantidad">
+
+            <label>9. ¿Recomendarías jugar a la lotería a otras personas?</label>
+            <input type="radio" id="recomendacion-si" name="recomendacion" value="Sí">
+            <label for="recomendacion-si">Sí</label>
+            <input type="radio" id="recomendacion-no" name="recomendacion" value="No">
+            <label for="recomendacion-no">No</label>
+
+            <label for="mejorar">10. ¿Qué opinion tienes sobre la lotería?</label>
+            <textarea id="mejorar" name="mejorar" rows="3"></textarea>
+
+            <label for="publicidad">11. ¿Qué opinas de la publicidad de la lotería? (1 - Muy mala, 5 - Excelente)</label>
+            <select id="publicidad" name="publicidad" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="canales">12. ¿Dónde prefieres juegar lotería?</label>
+            <input type="text" id="canales" name="canales" required>
+
+            <label for="participar">13. ¿Participarías en sorteos de lotería en línea?</label>
+            <input type="radio" id="participar-si" name="participar" value="Sí">
+            <label for="participar-si">Sí</label>
+            <input type="radio" id="participar-no" name="participar" value="No">
+            <label for="participar-no">No</label>
+
+            <label for="opinion">14. ¿Qué tan confiable consideras la lotería?</label>
+            <input type="text" id="opinion" name="opinion" required>
+
+            <label for="sugerencias">15. ¿Tienes alguna sugerencia adicional para mejorar la lotería?</label>
+            <textarea id="sugerencias" name="sugerencias" rows="4"></textarea>
+
+            <button type="submit">Enviar Respuestas</button>
+        </form>
+    </div>
+</body>
+</html>
